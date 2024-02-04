@@ -1,0 +1,115 @@
+# Adapted from serene v2.1.2
+base_url = "https://shapath.com.np"
+title = "Shap Bytes"
+description = "Musing from Shap"
+default_language = "en"
+output_dir = "public"
+compile_sass = true
+minify_html = true
+# Copy From https://github.com/aaranxu/adidoks/blob/5c698271c460046034605b743a15196b12e32887/content/docs/help/faq.md?plain=1#L23
+build_search_index = false  # Keep this false, search is temporarily unsupported
+generate_feed = true 
+feed_filename = "atom.xml"
+taxonomies = [
+    { name = "tags" },
+    { name = "categories" },
+]
+
+[markdown]  
+highlight_code = true
+highlight_theme = "nord"
+extra_syntaxes_and_themes = ["highlight_themes"]
+highlight_themes_css = [
+    { theme = "serene-light", filename = "hl-light.css"},
+    { theme = "serene-dark", filename = "hl-dark.css"},
+]
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = true
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+paths_keep_dates = false
+#=========================================================================================
+
+[extra]
+
+blog_name = "Shap Bytes"
+author = "Shap Neupane"
+bio = "musings from code"
+avatar = "https://2.gravatar.com/avatar/01de5512ffc9f8f4a5b8cf27dc4dfae173183daff2f110e5bb4e0a8b06f41eb2?size=512"
+# Set banners
+links = [
+    { name = "GitHub", icon = "github", url = "https://github.com/theshapguy" },
+    { name = "Twitter", icon = "twitter", url = "https://twitter.com/theshapguy" }
+]
+
+homepage_layout = "about"             # "about" | "list"
+
+sections = [
+    { name = "blog", path = "/posts", is_external = false },
+    # { name = "talks", path = "/talks", is_external = false },
+    # { name = "projects", path = "/projects", is_external = false },
+]
+blog_section_path = "/posts"
+
+nav_separator = "::"
+nav_wrapper_left = "{"
+nav_wrapper_right = "} ;"
+nav_wrapper_separator = ","
+
+blog_categorized = true               # Whether to categorize blog posts
+blur_effect = true                    # Whether to turn on blur effect on navigation bar
+back_to_top = true                    # Whether to show back-to-top button on post pages
+
+toc = false                            # Whether to show Table-Of-Contents by default
+copy = true                           # Whether to add a copy button on code blocks by default
+comment = false                       # Whether to show giscus comment section by default, see https://giscus.app for more info
+display_tags = true                   # Whether to display tags on post pages by default
+truncate_summary = true              # Whether to truncate the summary of a post by default
+
+outdate_alert = false                 # Whether to show outdate alert by default
+outdate_alert_days = 120              # How many days will a post be outdated by default
+outdate_alert_text_before = "This article was last updated "
+outdate_alert_text_after = " days ago and may be out of date."
+
+footer_copyright = "© 2024 Shapath Neupane"
+footer_credits = false                 # Whether to show "powered by zola and serene" in footer
+
+not_found_title = "404"
+not_found_error_text = "Not Found"
+not_found_recover_text = "« back to home »"
+
+## Open Graph + Twitter Cards
+[extra.seo]
+# this image will be used as fallback if a page has no image of its own
+image = "img/dataquarry-banner.png"
+image_height = 0
+image_width = 0
+og_locale = "en_US"
+
+  [extra.seo.twitter]
+  site = "shapath.com.np"
+  creator = "shapath.com.np"
+
+
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+# truncate_content_length = 100
+
+# Wether to produce the search index as a javascript file or as a JSON file
+# Accepted value "elasticlunr_javascript" or "elasticlunr_json"
+index_format = "elasticlunr_javascript"
