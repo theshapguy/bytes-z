@@ -1,8 +1,8 @@
 +++
-title = "Shap Bytes"
-description = "Musings From Code"
+title = "Shap Bytes - TILs"
+description = "Today I Learned."
 sort_by = "date"
-template = "blog.html"
+template = "til.html"
 page_template = "post.html"
 insert_anchor_links = "right"
 generate_feed = true

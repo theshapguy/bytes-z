@@ -1,7 +1,7 @@
 # Adapted from serene v2.1.2
-base_url = "https://bytes-z.pages.dev"
+base_url = "https://shapath.com.np"
 title = "Shap Bytes"
-description = "Musing from Shap"
+description = "Share space of code and musings for Shap"
 default_language = "en"
 output_dir = "public"
 compile_sass = true
@@ -41,7 +41,7 @@ paths_keep_dates = false
 blog_name = "Shap Bytes"
 author = "Shap Neupane"
 bio = "musings from code"
-avatar = "https://2.gravatar.com/avatar/01de5512ffc9f8f4a5b8cf27dc4dfae173183daff2f110e5bb4e0a8b06f41eb2?size=512"
+avatar = "img/shap-icon.webp"
 # Set banners
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/theshapguy" },
@@ -50,9 +50,10 @@ links = [
 
 homepage_layout = "about"             # "about" | "list"
 
+
 sections = [
     { name = "blog", path = "/posts", is_external = false },
-    # { name = "talks", path = "/talks", is_external = false },
+    { name = "til", path = "/til", is_external = false },
     # { name = "projects", path = "/projects", is_external = false },
 ]
 blog_section_path = "/posts"
@@ -87,7 +88,7 @@ not_found_recover_text = "« back to home »"
 ## Open Graph + Twitter Cards
 [extra.seo]
 # this image will be used as fallback if a page has no image of its own
-image = "img/dataquarry-banner.png"
+image = "img/bytes-banner.png"
 image_height = 0
 image_width = 0
 og_locale = "en_US"

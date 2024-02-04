@@ -16,14 +16,11 @@ toc = true
 
 +++
 
-> **Micro Project #1**. Please read my [Hello World](http://theshapguy.com/post/hello-world) post to find out more about this blog. This fortnight I'm working with Ansible to automate blog hosting along with server management.
->
->
 > This blog post is a hands down tutorial on `provisioning` a server by hosting a blog using Git and nginx with Ansible.
 
 Ansible is a configuration management system. Ansible by default uses the SSH protocol to manage machines. There are other configuration tools like Puppet and Chef, however these require you to install a small piece of software on the client server. Hence, my preference to Ansible.
 
-#### Installing Ansible
+## Installing Ansible
 
 We only need to install Ansible on the local computer. However make sure the server has `Python 2.7` installed.
 
@@ -40,9 +37,9 @@ $ sudo apt-add-repository ppa:ansible/ansible
 $ sudo apt-get update
 $ sudo apt-get install ansible
 ```
-Please refer to [Ansible Installation Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu) to install on more OS's
+Please refer to [Ansible Installation Docs](https://docs.ansible.com/ansible/latest/installation_guide/index.html) to install on more OS's
 
-#### Ansible Basics
+## Ansible Basics
 
 There are two ways you can use Ansible depending on your use case. Firstly, use can use Ansible like `bash` scripts. These will be lists of `tasks` that you use to provision the server.
 
@@ -81,7 +78,7 @@ Now lets explain each of these.
 
 **vars**: These are variables that you can use in your roles.
 
-#### Prerequsites
+## Prerequsites
 
 1. Make sure you have access to a remote or local Ubuntu Server. I use [DigitalOcean](https://m.do.co/c/95bdc8dc8e65) to cater for all my server needs since it is quick and easy to spin up machines.
     **Quick Bonus**: if you sign up throught this [link](https://m.do.co/c/95bdc8dc8e65) you get $10 in  [DigitalOcean](https://m.do.co/c/95bdc8dc8e65) credit.
@@ -163,8 +160,6 @@ Now lets create a handler to restart nginx. If there are any changes to the file
 
 Now, your website should be running on your `{{ domain }}` as listed on your vars directory.
 
-### Final Words
 
-This is a quick and fast way to serve a website using Ansible. Please refer to my Github [repository](https://github.com/theshapguy/52WeeksOfCode/tree/master/blog-hosting-with-ansible) for the full playbook. The Github  [repository](https://github.com/theshapguy/52WeeksOfCode/tree/master/blog-hosting-with-ansible) also includes setup for a secure (https) website. It installs and renews `letsencrypt` certificate which makes your blog secure. Refer to this playbook for more tips and tricks that I use to host my [blog](theshapguy.com).
 
 

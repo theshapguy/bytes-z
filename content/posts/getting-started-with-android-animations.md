@@ -4,7 +4,6 @@ title = "Getting Started with Android Animations"
 date = "2023-07-03"
 draft = false
 
-
 [taxonomies]
 tags = ["android"]
 categories = ["Android"]

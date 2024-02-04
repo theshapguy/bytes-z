@@ -42,7 +42,7 @@ a:focus-visible {
     width: 4px;
     height: 4px;
   }
-  
+
   ::-webkit-scrollbar-track {
     background: #0000;
   }
@@ -90,7 +90,12 @@ a:focus-visible {
     font-size: 0.85em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     &:hover a.zola-anchor {
       visibility: visible;
     }
@@ -114,7 +119,7 @@ a:focus-visible {
     @media (max-width: 425px) {
       text-decoration-color: unset;
       text-decoration-thickness: auto;
-    }  
+    }
   }
 
   .youtube {
@@ -152,7 +157,7 @@ a:focus-visible {
     text-align: center;
     padding-top: 5px;
     font-size: 0.9em;
-}
+  }
 
   blockquote {
     border-left: 3px var(--primary-pale-color) solid;
@@ -237,12 +242,14 @@ a:focus-visible {
       width: 100%;
       border-collapse: collapse;
       border: none;
-      th, td {
+
+      th,
+      td {
         line-height: 1.5;
       }
     }
-    
-    
+
+
     table tr td:first-of-type {
       color: var(--text-pale-color);
     }
@@ -258,6 +265,7 @@ a:focus-visible {
       text-align: right;
       user-select: none;
       padding-right: 1em;
+
       mark::before {
         left: -8px;
         width: calc(100% + 1em + 8px);
@@ -287,7 +295,7 @@ a:focus-visible {
     }
   }
 
-  pre > code > mark::before {
+  pre>code>mark::before {
     width: calc(100% + 48px + 16px);
     left: -16px;
   }
@@ -296,7 +304,7 @@ a:focus-visible {
     margin: 1em 0;
     position: relative;
     overflow: auto;
-    
+
     pre {
       margin: 0;
     }
@@ -314,7 +322,8 @@ a:focus-visible {
       border: none;
       color: var(--text-pale-color);
 
-      &.copied, &:hover {
+      &.copied,
+      &:hover {
         color: var(--primary-color);
       }
 
@@ -347,16 +356,18 @@ a:focus-visible {
 
   .footnote-definition {
     display: flex;
- 
+
     .footnote-definition-label {
       position: static;
       font-size: 1em;
       line-height: inherit;
       vertical-align: auto;
       margin-right: 0.5em;
+
       &::before {
         content: "[";
       }
+
       &::after {
         content: "]";
       }
@@ -661,20 +672,24 @@ header {
       color: var(--text-color);
       -webkit-tap-highlight-color: transparent;
     }
+
     .wrap {
       &.left {
         margin: 0 0.3em 0 -0.1em;
       }
+
       &.right {
         margin: 0 0 0 0.3em;
       }
     }
+
     .wrap-separator {
       margin: 0 0.5em 0 0.1em;
     }
-    
+
     .fold {
       display: none;
+
       &.shown {
         display: initial;
       }
@@ -737,7 +752,7 @@ footer {
   .copyright {
     margin-right: auto;
   }
-  
+
   .credits {
     display: block;
   }
@@ -837,6 +852,7 @@ body.post {
       a {
         color: var(--primary-color);
         text-decoration: none;
+
         span {
           font-size: 0.95em;
           margin-right: 2px;
@@ -876,7 +892,7 @@ body.post {
       &::-webkit-scrollbar {
         width: 0;
       }
-      
+
       &:hover::-webkit-scrollbar {
         width: 4px;
       }
@@ -898,7 +914,7 @@ body.post {
       color: var(--text-pale-color);
       position: relative;
       padding: 0 1em;
-      
+
       &.h3 {
         padding-left: 2.5em;
         font-size: 0.95em;
@@ -913,18 +929,18 @@ body.post {
         bottom: 0.7em;
         left: 0em;
         background: transparent;
-      } 
+      }
 
       &:hover,
       &.active {
         color: var(--primary-color);
       }
-      
+
       &:hover::before {
         background-color: var(--primary-color);
       }
     }
-    
+
     #back-to-top {
       z-index: 99;
       height: 28px;
@@ -936,13 +952,15 @@ body.post {
       background: transparent;
       border: none;
       cursor: pointer;
+
       svg {
         width: 28px;
         height: 28px;
       }
+
       transform: translateY(-5px) scale(0);
       transition: transform 0.2s;
-      
+
       &.shown {
         transform: translateY(0px) scale(1);
       }
@@ -1127,7 +1145,7 @@ body.projects {
 
   .proj {
     margin: 0px 15px 45px;
-    
+
     .name {
       font-size: 1.1em;
       margin: 0 0 15px 0;
@@ -1163,7 +1181,7 @@ body.projects {
       align-items: center;
       flex-wrap: wrap;
       gap: 1em;
-      
+
       .tags {
         font-size: 0.9em;
         display: flex;
@@ -1172,6 +1190,7 @@ body.projects {
 
         div {
           color: var(--text-pale-color);
+
           span {
             font-size: 0.9em;
             margin-right: 1.5px;
@@ -1209,20 +1228,20 @@ body.projects {
 /* 404 page
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
-body.not-found {  
+body.not-found {
   height: 100vh;
   height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3em;
   }
-  
+
   .error {
     display: flex;
     align-items: center;
@@ -1245,7 +1264,8 @@ body.not-found {
     color: var(--primary-color);
     text-decoration-color: var(--primary-pale-color);
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       text-decoration-color: var(--primary-color);
     }
   }
@@ -1436,4 +1456,27 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+
+// Customized
+
+$avatarSize: 32px;
+
+.avatar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: 10px solid var(--primary-pale-color);
+  border-radius: $avatarSize;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
 }

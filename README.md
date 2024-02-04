@@ -1,24 +1,26 @@
-Shap's Bytes
+# Shap's Bytes
 =========
 
-This is my blog at [theshapguy.com](https://theshapguy.com/). Drafts are included in this `drafts` branch. Sneek peek on what I'm working on is available here.
+This is my blog at [theshapguy.com](https://theshapguy.com/). Drafts are included in this `drafts` branch.
 
-Ported from Hugo to Zola
+TIL's are in a different subfolder, the build script copies them into the posts folder and builds them so that they are shown in the blog index.
 
-License
--------
+Ported from Hugo to Zola.
+
+## License
+
 
 © 2024 Shapath Neupane. 3-Clause BSD License.
 
 
-Author Information
-------------------
+## Author Information
 
 [@theshapguy](http://twitter.com/theshapguy)
+[shap_at_this_domain](mailto:)
 
 ## Stack
 
 * Framework: [Zola](https://www.getzola.org/)
 * Theme: Adapted version of [Serene](https://github.com/isunjn/serene)
-* Hosting: [Cloudflare Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+* Hosting: [Cloudflare Pages](https://pages.cloudflare.com/)
 * Analytics: [Umami](https://umami.is/)

@@ -317,9 +317,9 @@ If there are problems in the code, do a `git blame`, and create a issue on Githu
 
 ## A few Git tips and tricks
 
-1. Use aliases for git, this various git commands in a few keystrokes. Mine is attached [here](https://github.com/theshapguy/macos_provision/blob/b30e89694bfb24e7cfddb3e1e687445fcf46f307/files/dot/gitconfig). Copy this file into your home directory at `~/.gitconfig` to access this aliases.
+1. Use aliases for git, this various git commands in a few keystrokes.
 
-2. Also consider using a bash prompt (PS1) that allows you to see which branch you are working on. My `bash_profile` [here](https://github.com/theshapguy/macos_provision/blob/b30e89694bfb24e7cfddb3e1e687445fcf46f307/files/dot/bash_profile) which includes the PS1. Copy this file or the PS1 section (probably just the PS1 section along with `parse_git_branch` function) into your `~/.bash_profile`. After this run `source ~/.bash_profile` to update these aliases.
+2. Also consider using a bash prompt (PS1) that allows you to see which branch you are working on.
 
 3. I know using Github GUI is easy however, it only harnesses a mere potential of Git. Therefore start loving using git via command-line and leave the GUI behind.
 
