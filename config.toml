@@ -1,5 +1,5 @@
 # Adapted from serene v2.1.2
-base_url = "https://shapath.com.np"
+base_url = "https://bytes-z.pages.dev"
 title = "Shap Bytes"
 description = "Musing from Shap"
 default_language = "en"

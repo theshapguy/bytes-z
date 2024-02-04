@@ -1,6 +1,6 @@
 +++
-title = "The Data Quarry"
-description = "A.I. and Data Engineering from a Python and Rust perspective."
+title = "Shap Bytes"
+description = "My interesting posts."
 sort_by = "date"
 template = "blog.html"
 page_template = "post.html"
