@@ -3,9 +3,10 @@ date = "2024-01-11"
 description = "A Git Team Workflow"
 title = "Github+1 Workflow"
 
+
 [taxonomies]
-tags = ["general"]
-categories = ["General"]
+tags = ["general", "git", "team"]
+categories = ["Development"]
 
 
 [extra]

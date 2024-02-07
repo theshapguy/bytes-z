@@ -1,10 +1,11 @@
 {% extends "_base.html" %}
 
 {% block page %}blog{% endblock page%}
-{% block lang %}{% if section.extra.lang %}{{ section.extra.lang }}{% else %}{{ section.lang }}{% endif %}{% endblock lang %}
+{% block lang %}{% if section.extra.lang %}{{ section.extra.lang }}{% else %}{{ section.lang }}{% endif %}{% endblock
+lang %}
 {% block title %}{{ section.title }}{% endblock title %}
 {% block desc %}
-  <meta name="description" content="{{ section.description }}">
+<meta name="description" content="{{ section.description }}">
 {% endblock desc %}
 
 {% block content %}
@@ -13,7 +14,24 @@
   <main class="layout-list">
     {% if config.extra.blog_categorized %}
 
-    {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.1") -%}
+    {% set map = section.pages | group_by(attribute="taxonomies.categories.1") %}
+    {% set_global categories = [] %}
+    {% for category, ignored in map %}
+    {% set_global categories = categories | concat(with=category) %}
+    {% endfor %}
+    {% for category in categories | sort() %}
+    <div class="category category-til">{{ category }}</div>
+    {% set posts = map[category] %}
+    {% for post in posts %}
+    <a class="post" href="{{ post.permalink }}">
+      <span>{{ post.title }}</span>
+      <span class="date">{{ post.date | date}}</span>
+    </a>
+    {% endfor %}
+    {% endfor %}
+
+    <!-- Removed This So That Group By Keys Can Be Sorted -->
+    <!-- {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.1") -%}
     <div class="category">{{ category }}</div>
     <div>
       {% for post in posts %}
@@ -23,7 +41,7 @@
       </a>
       {% endfor %}
     </div>
-    {% endfor %}
+    {% endfor %} -->
     {% else %}
     <div class="post-list">
       {% for post in section.pages %}

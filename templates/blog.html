@@ -12,7 +12,28 @@
 <div id="wrapper">
   <main class="layout-list">
     {% if config.extra.blog_categorized %}
-    {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.0") -%}
+
+    {% set map = section.pages | group_by(attribute="taxonomies.categories.0") %}
+    {% set_global categories = [] %}
+    {% for category, ignored in map %}
+    {% set_global categories = categories | concat(with=category) %}
+    {% endfor %}
+
+
+    {% for category in categories | sort() %}
+    
+    <div class="category category-blog">{{ category }}</div>
+
+    {% set posts = map[category] %}
+    {% for post in posts %}
+    <a class="post" href="{{ post.permalink }}">
+      <span>{{ post.title }}</span>
+      <span class="date">{{ post.date | date}}</span>
+    </a>
+    {% endfor %}
+    {% endfor %}
+  
+    <!-- {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.0") -%}
     <div class="category">{{ category }}</div>
     <div>
       {% for post in posts %}
@@ -22,7 +43,9 @@
       </a>
       {% endfor %}
     </div>
-    {% endfor %}
+    {% endfor %} -->
+
+
     {% else %}
     <div class="post-list">
       {% for post in section.pages %}

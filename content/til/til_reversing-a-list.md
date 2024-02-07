@@ -36,4 +36,4 @@ created, per Elixir's functional nature.
 
 #### Sources
 
-- https://github.com/jbranchaud/til/blob/c7bea5aa7818767aef1915e3abe887f661df45cd/elixir/reversing-a-list.md
+- <https://github.com/jbranchaud/til/blob/c7bea5aa7818767aef1915e3abe887f661df45cd/elixir/reversing-a-list.md>

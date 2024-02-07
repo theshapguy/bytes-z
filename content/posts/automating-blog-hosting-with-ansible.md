@@ -7,7 +7,7 @@ draft = false
 
 [taxonomies]
 tags = ["deployments", "ci"]
-categories = ["Deployments"]
+categories = ["Deploy"]
 
 
 [extra]
