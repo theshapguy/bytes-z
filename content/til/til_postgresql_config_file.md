@@ -5,7 +5,7 @@ date = "2024-01-18"
 draft = false
 
 [taxonomies]
-tags = ["database", "til"]
+tags = ["database", "postgresql", "til"]
 categories = ["Today I Learned", "PostgreSQL"]
 
 

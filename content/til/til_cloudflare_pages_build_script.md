@@ -17,7 +17,7 @@ toc = false
 
 Rather than using the predefied build commands of Cloudflare Pages, it is extremley handly to create a build script and call the script with `bash build.sh` from the build command. It gives you control over how pages are build in different branches.
 
-`$CF_PAGES_BRANCH` & `$CF_PAGES_URL` are enviornment variables provided by cloudflare at build time.
+`$CF_PAGES_BRANCH` & `$CF_PAGES_URL` are enviornment variables provided by Cloudflare at build time.
 
 ```bash
 #!/bin/bash
