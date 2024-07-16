@@ -1,7 +1,7 @@
 +++
 
 title = "Pretty Print JSON Reponse in Bash"
-date = "2034-02-04"
+date = "2024-02-04"
 draft = false
 
 [taxonomies]
