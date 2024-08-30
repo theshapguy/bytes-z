@@ -68,10 +68,13 @@
       </div>
       <div id="right">
         {% set rss_icon = load_data(path="static/icon/rss.svg") %}
-        {% if section.generate_feed -%}
-        <a href="{{ blog_section_path }}/{{ config.feed_filename }}" aria-label="rss feed">{{ rss_icon | safe }}</a>
-        {% elif config.generate_feed -%}
-        <a href="/{{ config.feed_filename }}" aria-label="rss feed">{{ rss_icon | safe }}</a>
+        {% if section.generate_feeds %}
+        {% set_global rss_path = blog_section_path ~ "/" ~ config.feed_filenames.0 %}
+        {% elif config.generate_feeds %}
+          {% set_global rss_path = "/" ~ config.feed_filenames.0 %}
+        {% endif %}
+        {% if section.generate_feeds or config.generate_feeds %}
+        <a id="rss-btn" href="{{ rss_path }}" aria-label="rss feed">{{ rss_icon | safe }}</a>
         {% endif %}
         {% for link in config.extra.links -%}
         <a href="{{ link.url }}" aria-label="{{ link.name }}" target="_blank" rel='noreferrer noopener'>
